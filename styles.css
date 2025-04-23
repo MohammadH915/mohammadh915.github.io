@@ -178,7 +178,7 @@ nav ul li a:hover, nav ul li a.active {
     transform: scale(1.1);
 }
 
-/* Projects Page Styles */
+/* Common Layout Styles */
 .page-layout {
     display: flex;
     gap: 40px;
@@ -189,7 +189,9 @@ nav ul li a:hover, nav ul li a.active {
     flex-shrink: 0;
 }
 
-.projects-section {
+.projects-section,
+.interests-section,
+.home-content {
     flex: 1;
 }
 
@@ -203,11 +205,70 @@ nav ul li a:hover, nav ul li a.active {
     line-height: 1.6;
 }
 
+/* Projects Page Styles */
 .projects-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
     margin-bottom: 50px;
+}
+
+/* Interests Page Styles */
+.interests-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.interest-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interest-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.interest-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.interest-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.interest-resources h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.interest-resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.interest-resources li {
+    margin-bottom: 8px;
+}
+
+.interest-resources a {
+    color: #0366d6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.interest-resources a:hover {
+    color: #0246a2;
+    text-decoration: underline;
 }
 
 .project-card {
@@ -322,6 +383,7 @@ footer .social-links {
         justify-content: center;
     }
     
+    /* Projects page responsive */
     .project-card {
         flex-direction: column;
     }
@@ -338,5 +400,14 @@ footer .social-links {
     .project-links {
         flex-direction: column;
         gap: 10px;
+    }
+    
+    /* Interests page responsive */
+    .interest-content {
+        padding: 20px;
+    }
+    
+    .interest-resources ul {
+        margin-left: 15px;
     }
 }

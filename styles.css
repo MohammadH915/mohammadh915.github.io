@@ -50,10 +50,60 @@ nav ul li a:hover, nav ul li a.active {
     margin: 10px 0 30px 0;
 }
 
-.profile-container {
+/* Home Page Styles */
+.home-content {
+    flex: 1;
+}
+
+.about-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.interest-list {
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.interest-list li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.skills-section {
+    margin-top: 25px;
+}
+
+.skills-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.skill-tags {
     display: flex;
-    gap: 40px;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #f0f0f0;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.skill-tag:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
 }
 
 .left-column {
@@ -128,18 +178,165 @@ nav ul li a:hover, nav ul li a.active {
     transform: scale(1.1);
 }
 
+/* Projects Page Styles */
+.page-layout {
+    display: flex;
+    gap: 40px;
+}
+
+.profile-container {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.projects-section {
+    flex: 1;
+}
+
+.page-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section-intro {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.project-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 300px;
+    min-width: 300px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-tags {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.project-link:hover {
+    background-color: #ddd;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+footer .social-links {
+    margin-bottom: 15px;
+}
+
+.copyright {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    .profile-container {
+    /* Project page */
+    .page-layout {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
     }
 
-    .left-column {
+    .profile-container {
+        width: 100%;
         margin-bottom: 30px;
     }
 
+    .projects-section {
+        text-align: center;
+    }
+    
+    /* Home page */
+    .home-content {
+        width: 100%;
+    }
+    
+    .left-column {
+        margin-bottom: 30px;
+    }
+    
     .about-section {
         text-align: center;
+    }
+    
+    .skill-tags {
+        justify-content: center;
+    }
+    
+    .project-card {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .project-info {
+        padding: 20px;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
     }
 }
